@@ -40,12 +40,12 @@ jobs:
       - name: Apply FlyCraft starter changes
         shell: bash
         run: |
-          if [ ! -f FlyCraft-v0.1-patch.zip ]; then
-            echo "FlyCraft-v0.1-patch.zip is missing from the repository root."
+          if [ ! -f FlyCraft-v0.2-patch.zip ]; then
+            echo "FlyCraft-v0.2-patch.zip is missing from the repository root."
             exit 1
           fi
           mkdir -p /tmp/flycraft-patch
-          unzip -q -o FlyCraft-v0.1-patch.zip -d /tmp/flycraft-patch
+          unzip -q -o FlyCraft-v0.2-patch.zip -d /tmp/flycraft-patch
           cp -a /tmp/flycraft-patch/flycraft-changes/web/. web/
           cp /tmp/flycraft-patch/flycraft-changes/FLYCRAFT-START-HERE.md ./FLYCRAFT-START-HERE.md
           cp /tmp/flycraft-patch/flycraft-changes/README-upstream-plus-FlyCraft.md ./README.md
